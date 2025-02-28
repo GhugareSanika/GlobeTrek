@@ -34,7 +34,6 @@ export default function Header() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   logo: {
     width: 50,
