@@ -30,7 +30,8 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow GlobeTrek to use your location."
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
