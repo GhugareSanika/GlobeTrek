@@ -21,7 +21,7 @@ const API_KEY = "AlzaSym1lsQooWBsUNN1_L8pEJGVK9Vkmbqei8d";
 
 const nearByPlace = (lat, lng, type) =>
   axios.get(
-    `${BASE_URL}/nearbysearch/json?location=${lat},${lng}&radius=5000&type=restaurant&key=${API_KEY}`
+    `${BASE_URL}/nearbysearch/json?location=${lat},${lng}&radius=5000&type=${type}&key=${API_KEY}`
   );
 
 export default { nearByPlace };

@@ -76,7 +76,7 @@ export default function PlaceItem({ place }) {
   const [photoUrl, setPhotoUrl] = useState(
     place.photos && place.photos.length > 0
       ? `https://maps.gomaps.pro/maps/api/place/photo?photo_reference=${place.photos[0].photo_reference}&maxwidth=400&key=AlzaSym1lsQooWBsUNN1_L8pEJGVK9Vkmbqei8d`
-      : "https://5bestincity.com/listimg/India/kolhapur-mh/Hotel-purn-Kolhapuri-Tadka-Food-Family-restaurants-Kolhapur-Maharashtra-1.jpg" // Fallback to a placeholder image
+      : place.icon || "https://via.placeholder.com/100" // Fallback to a placeholder image
   );
 
   console.log("Photo URL:", photoUrl); // Log the photo URL for debugging

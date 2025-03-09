@@ -55,14 +55,19 @@ export default function Home() {
       // Ensure location is not null before calling APIconsole.log("Location in Home:", location);
       console.log("Location in Home:", location);
 
-      GetNearBySearchPlace();
+      GetNearBySearchPlace("restaurant");
     }
   }, [location]); // Run when location is available
 
-  const GetNearBySearchPlace = () => {
+  const GetNearBySearchPlace = (value) => {
     if (!location || !location.coords) return; // Prevent error
 
-    GlobalApi.nearByPlace(location.coords.latitude, location.coords.longitude)
+    console.log("Category:", value);
+    GlobalApi.nearByPlace(
+      location.coords.latitude,
+      location.coords.longitude,
+      value
+    )
       .then((resp) => {
         if (resp.data && resp.data.results) {
           setPlaceList(resp.data.results);
@@ -81,7 +86,9 @@ export default function Home() {
     >
       <Header />
       <GoogleMapView placeList={placeList} />
-      <CategoryList />
+      <CategoryList
+        setSelectedCategory={(value) => GetNearBySearchPlace(value)}
+      />
       {placeList.length > 0 && <PlaceList placeList={placeList} />}
     </ScrollView>
   );
