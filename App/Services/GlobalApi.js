@@ -19,11 +19,9 @@ import axios from "axios";
 const BASE_URL = "https://maps.gomaps.pro/maps/api/place";
 const API_KEY = "AlzaSym1lsQooWBsUNN1_L8pEJGVK9Vkmbqei8d";
 
-const nearByPlace = () =>
+const nearByPlace = (lat, lng, type) =>
   axios.get(
-    `${BASE_URL}/nearbysearch/json?location=-33.86705222,151.1957362&radius=1500&type=restaurant&key=${API_KEY}`
+    `${BASE_URL}/nearbysearch/json?location=${lat},${lng}&radius=5000&type=restaurant&key=${API_KEY}`
   );
 
 export default { nearByPlace };
-
-`https://maps.gomaps.pro/maps/api/places/nearbysearch/json?location=-33.86705222,151.1957362&radius=1500&type=restaurant&key=AlzaSym1lsQooWBsUNN1_L8pEJGVK9Vkmbqei8d`;

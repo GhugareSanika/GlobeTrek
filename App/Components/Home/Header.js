@@ -18,6 +18,7 @@ export default function Header() {
         justifyContent: "space-evenly",
         alignItems: "center",
         gap: 4,
+        marginTop: 25,
       }}
     >
       <Image
