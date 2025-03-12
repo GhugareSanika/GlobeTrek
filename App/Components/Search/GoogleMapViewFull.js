@@ -7,7 +7,7 @@ import PlaceMarker from "../Home/PlaceMarker";
 
 export default function GoogleMapViewFull({ placeList }) {
   const [mapRegion, setmapRegion] = useState([]);
-
+  console.log("placelist:", placeList);
   const { location, setLocation } = useContext(UserLocationContext);
 
   useEffect(() => {
@@ -33,10 +33,10 @@ export default function GoogleMapViewFull({ placeList }) {
           region={mapRegion}
         >
           <Marker title="You" coordinate={mapRegion} />
-          {/* {placeList.map(
+          {placeList.map(
             (item, index) =>
               index <= 4 && <PlaceMarker item={item} key={index} />
-          )} */}
+          )}
         </MapView>
       ) : null}
     </View>

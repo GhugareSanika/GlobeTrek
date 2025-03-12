@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { FlatList } from "react-native";
 import CategoryItem from "./CategoryItem";
+import Colors from "../../Shared/Colors";
 
 export default function CategoryList({ setSelectedCategory }) {
   const categoryList = [
@@ -29,7 +30,7 @@ export default function CategoryList({ setSelectedCategory }) {
       <Text
         style={{
           fontSize: 20,
-          fontFamily: "",
+          fontFamily: "LatoBold",
         }}
       >
         Select Top Category
@@ -39,7 +40,7 @@ export default function CategoryList({ setSelectedCategory }) {
         data={categoryList}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        style={{ marginTop: 5 }}
+        style={{ marginTop: 5, backgroundColor: Colors.BLUE }}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => setSelectedCategory(item.value)}>
             <CategoryItem category={item} />
