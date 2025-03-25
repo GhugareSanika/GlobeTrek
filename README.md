@@ -1,3 +1,5 @@
+> # Check the demo here: https://expo.dev/preview/update?message=done&updateRuntimeVersion=1.0.0&createdAt=2025-03-25T17%3A49%3A13.840Z&slug=exp&projectId=5914263b-ef3e-49e2-b2b4-1545e2b13f2f&group=f7d7ebd3-210b-489d-9938-1ebd7f25b8ec
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
