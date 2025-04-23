@@ -22,7 +22,7 @@ export default function Header() {
       }}
     >
       <Image
-        source={require("./../../../assets/images/location.png")}
+        source={require("./../../../assets/images/map.png")}
         style={styles.logo}
       />
       <View>
@@ -37,8 +37,8 @@ export default function Header() {
 }
 const styles = StyleSheet.create({
   logo: {
-    width: 50,
-    height: 50,
+    width: 45,
+    height: 45,
   },
   searchBar: {
     borderWidth: 1,

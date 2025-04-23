@@ -15,7 +15,6 @@ export default function Search() {
   const GetNearBySearchPlace = (value) => {
     GlobalApi.searchByText(value).then((resp) => {
       setPlaceList(resp.data.results);
-      console.log("results:", resp.data.results);
     });
   };
   return (

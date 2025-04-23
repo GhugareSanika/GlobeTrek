@@ -10,6 +10,7 @@ import PlaceDetail from "../Components/PlaceDetail/PlaceDetail";
 export default function HomeNavigation() {
   const isAndroid = true;
   const Stack = createStackNavigator();
+
   return (
     <Stack.Navigator
       screenOptions={{

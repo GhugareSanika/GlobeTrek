@@ -17,7 +17,11 @@ export default function CategoryItem({ category }) {
         elevation: 3,
       }}
     >
-      <Image source={category.icon} style={{ width: 50, height: 50 }} />
+      <Image
+        source={category.icon}
+        style={{ width: 50, height: 50 }}
+        key={category.id}
+      />
       <Text style={{ fontSize: 13, fontFamily: "Lato" }}>{category.name}</Text>
     </View>
   );
